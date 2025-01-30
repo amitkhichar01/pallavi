@@ -1,17 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
+.wrapper .dynamic-texts {
+  line-height: 90px;
+  height: 90px;
+  position: relative;
+  overflow: hidden;
+}
 
-.animated-underline::after {
-    content: "";
-    height: 1px;
-    width: 0%;
-    background-color: #c4c5c9;
-    position: absolute;
+.dynamic-texts li {
+  list-style: none;
+  font-size: 53px;
+  font-weight: 900;
+  top: 0;
+  position: relative !important;
+  width: max-content;
+  animation: slide 9s steps(3) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -270px;
+  }
+}
+
+.dynamic-texts li::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 65%;
+  height: 65%; 
+  transform: translateY(-65%); 
+  width: 100%;
+  background: #17262b;
+  border-left: 7px solid white;
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 5px);
+  }
+  100% {
     left: 0;
-    bottom: 0;
-    transition: 0.5s;
   }
-  
-  .animated-underline-box:hover .animated-underline::after {
-    width: 100%;
-  }
+}

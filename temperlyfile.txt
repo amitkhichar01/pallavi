@@ -1,0 +1,6 @@
+    --color-1: #FEE5B5;
+    --color-2: #17272A;
+    --color-3: #142022;
+    --color-4: #233133;
+    --color-5: #FFFFFF;
+    --color-6: #ffffff;
